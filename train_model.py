@@ -17,10 +17,10 @@ X = data
 
 # Data Normalization
 scaler = StandardScaler()
-data_scaled = scaler.fit_transform(X)
+X_scaled = scaler.fit_transform(X)
 
 # Data splitting
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=7)
+X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.3, random_state=7)
 
 # Creating the classifier
 clf = LogisticRegression(class_weight="balanced")
@@ -44,7 +44,7 @@ print auc(fpr, tpr)
 
 # Saving the classifier
 
-joblib.dump(clf, 'meetup_classifier.pkl')
+joblib.dump(clf, 'classifier.pkl')
 
 print "The classifier was saved with success!!!!"
 
