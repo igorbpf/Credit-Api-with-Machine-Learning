@@ -9,7 +9,7 @@ https://www.kaggle.com/c/GiveMeSomeCredit
  
  To start the API, run python app.py and browse localhost:5000
  
- Or instead check the API running in production at: http://mlbanking.herokuapp.com/
+ Or instead check the API running in production at: https://mlbanking.herokuapp.com/
  
  Also possible send requests via command line by curl:
  
