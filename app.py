@@ -5,6 +5,9 @@ import numpy as np
 
 app = Flask(__name__)
 
+from werkzeug.contrib.fixers import ProxyFix
+app.wsgi_app = ProxyFix(app.wsgi_app)
+
 api = Api(app,
         version='1.0',
         title='Credit Prediction API',
